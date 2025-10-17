@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="nilai_analisis"/>
+        <attribute name="authors" value="Lovis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-17 03.34.19 PM"/>
+        <attribute name="created" value="TG92aXM7TE9WSVNLQTsyMDI1LTEwLTE3OzAzLjE3LjQ1IFBNOzIzMjA="/>
+        <attribute name="edited" value="TG92aXM7TE9WSVNLQTsyMDI1LTEwLTE3OzAzLjM0LjE5IFBNOzE7MjQyOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="nr, total, maks, min" type="Real" array="False" size=""/>
+            <declare name="ns" type="Real" array="True" size="4"/>
+            <assign variable="total" expression="0"/>
+            <for variable="i" start="0" end="3" direction="inc" step="1">
+                <output expression="&quot;Masukkan nilai ke-&quot;&amp;i+1&amp;&quot;:&quot;" newline="True"/>
+                <input variable="ns[i]"/>
+                <assign variable="total" expression="total+ns[i]"/>
+            </for>
+            <assign variable="nr" expression="total/4"/>
+            <assign variable="maks" expression="ns[0]"/>
+            <for variable="i" start="1" end="3" direction="inc" step="1">
+                <if expression="ns[i]&gt;maks">
+                    <then>
+                        <assign variable="maks" expression="ns[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <assign variable="min" expression="ns[0]"/>
+            <for variable="i" start="1" end="3" direction="inc" step="1">
+                <if expression="ns[i]&lt;min">
+                    <then>
+                        <assign variable="min" expression="ns[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Rata-rata=&quot;&amp;nr" newline="True"/>
+            <output expression="&quot;Tertinggi=&quot;&amp;maks" newline="True"/>
+            <output expression="&quot;Terendah=&quot;&amp;min" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

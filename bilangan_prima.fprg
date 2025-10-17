@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="bilangan_prima"/>
+        <attribute name="authors" value="Lovis"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-17 04.23.09 PM"/>
+        <attribute name="created" value="TG92aXM7TE9WSVNLQTsyMDI1LTEwLTE3OzAzLjQ5LjEzIFBNOzIzMjA="/>
+        <attribute name="edited" value="TG92aXM7TE9WSVNLQTsyMDI1LTEwLTE3OzA0LjIzLjA5IFBNOzE7MjQyNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, x, Prima, sum, nilai" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="x" expression="2"/>
+            <output expression="x" newline="True"/>
+            <assign variable="Prima" expression="0"/>
+            <while expression="x&lt;=n">
+                <output expression="isPrima(x)" newline="True"/>
+                <assign variable="Sum" expression="sum - nilai"/>
+                <assign variable="x" expression="x+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
